@@ -21,6 +21,8 @@ export async function POST(req: Request) {
 
     // Mengakses candidates secara langsung jika bentuknya adalah objek
     const candidates = responseData.candidates;
+    
+    console.log("Teks diambil langsung dari respons : ", responseData.text)
 
     // Cek tipe dan akses data dengan cara yang lebih fleksibel
     if (candidates && Object.values(candidates).length > 0) {
